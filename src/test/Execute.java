@@ -25,6 +25,8 @@ public class Execute {
 		UsuarioDAO userDAo= new UsuarioDAO();
 		userDAo.insertUser(user);
 		
+		System.out.println("Finalinado com Sucesso");
+		
 	}
 
 }
