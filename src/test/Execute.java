@@ -11,11 +11,8 @@ public class Execute {
 	public static void main(String[] args) throws SQLException, ClassNotFoundException {
 		
 		
-		BD bd= new BD();
+
 		
-		if(bd.getConnection()!=null){
-			System.out.println("Conectado");
-		}
 		
 		Usuario user= new Usuario();	
 		user.setNome("Lariss");
@@ -26,6 +23,7 @@ public class Execute {
 		userDAo.insertUser(user);
 		
 		System.out.println("Finalinado com Sucesso");
+		System.out.println("Tudo Certo");
 		
 	}
 

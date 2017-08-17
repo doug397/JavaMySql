@@ -8,17 +8,17 @@ import com.mysql.jdbc.PreparedStatement;
 
 import br.com.dominio.Usuario;
 
-public class UsuarioDAO implements UsuarioCRUD {
+public class UsuarioDAO extends BD implements UsuarioCRUD {
 	
 	
 	
 	
 	public boolean insertUser(Usuario user) throws ClassNotFoundException, SQLException{
-		if(BD.getConnection()== null){
+		if(this.getConnection()== null){
 			return false;
 		}
 		String sql="INSERT INTO usuario(nome,email,senha)values(?,?,?)";
-		PreparedStatement ps= (PreparedStatement) BD.getConnection().prepareStatement(sql);
+		PreparedStatement ps= (PreparedStatement)this.getConnection().prepareStatement(sql);
 		
 	
 		ps.setString(1,user.getNome());
@@ -31,13 +31,13 @@ public class UsuarioDAO implements UsuarioCRUD {
 
 	@Override
 	public ArrayList<Usuario> getAllUsuario() throws ClassNotFoundException, SQLException {
-		if(BD.getConnection()== null){
+		if(this.getConnection()== null){
 			return null;
 		}
 		ArrayList<Usuario> users = new ArrayList<>();
 		
 		String sql="SELECT codigo,nome,email,senha FROM usuario";
-		PreparedStatement ps= (PreparedStatement) BD.getConnection().prepareStatement(sql);
+		PreparedStatement ps= (PreparedStatement) this.getConnection().prepareStatement(sql);
 		
 		ResultSet rs=ps.executeQuery();
 		

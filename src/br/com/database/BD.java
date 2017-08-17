@@ -11,7 +11,7 @@ public class BD {
 	private static final String SENHA="root";
 	private static String url="jdbc:mysql://localhost/java";
 	
-	public static Connection getConnection() throws SQLException, ClassNotFoundException{
+	protected Connection getConnection() throws SQLException, ClassNotFoundException{
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection conexao= (Connection) DriverManager.getConnection(url,USER,SENHA);
 		//System.out.println("Conectado");
