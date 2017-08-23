@@ -7,7 +7,7 @@ import com.mysql.jdbc.Connection;
 
 import br.com.dominio.Usuario;
 
-public interface UsuarioCRUD {
+public interface UsuarioDAOIF {
 	
 	ArrayList<Usuario> getAllUsuario() throws ClassNotFoundException, SQLException;
 	

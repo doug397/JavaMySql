@@ -8,7 +8,7 @@ import com.mysql.jdbc.PreparedStatement;
 
 import br.com.dominio.Usuario;
 
-public class UsuarioDAO extends BD implements UsuarioCRUD {
+public class UsuarioDAO extends BD implements UsuarioDAOIF {
 	
 	
 	
