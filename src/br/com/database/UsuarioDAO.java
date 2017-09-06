@@ -12,7 +12,6 @@ public class UsuarioDAO extends BD implements UsuarioDAOIF {
 	
 	
 	
-	
 	public boolean insertUser(Usuario user) throws ClassNotFoundException, SQLException{
 		if(this.getConnection()== null){
 			return false;
@@ -34,21 +33,24 @@ public class UsuarioDAO extends BD implements UsuarioDAOIF {
 		if(this.getConnection()== null){
 			return null;
 		}
-		ArrayList<Usuario> users = new ArrayList<>();
-		
+		ArrayList<Usuario> users = new ArrayList<>();	
 		String sql="SELECT codigo,nome,email,senha FROM usuario";
 		PreparedStatement ps= (PreparedStatement) this.getConnection().prepareStatement(sql);
-		
 		ResultSet rs=ps.executeQuery();
-		
-	
 		
 		return users;
 	}
 
+
 	@Override
-	public Usuario getUserId() {
+	public void atualizar(Usuario usuario) {
+		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public Usuario getUserId(int codigo) {
+		// TODO Auto-generated method stub
 		return null;
 	}
 }

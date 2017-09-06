@@ -10,14 +10,10 @@ public class Execute {
 
 	public static void main(String[] args) throws SQLException, ClassNotFoundException {
 		
-		
-
-		
-		
 		Usuario user= new Usuario();	
-		user.setNome("Lariss");
-		user.setEmail("laretipo.vasco@hotmail.com");
-		user.setSenha("larissa");
+		user.setNome("Pablo Henrrique");
+		user.setEmail("pablohenrique@edu.br");
+		user.setSenha("henri");
 		
 		UsuarioDAO userDAo= new UsuarioDAO();
 		userDAo.insertUser(user);

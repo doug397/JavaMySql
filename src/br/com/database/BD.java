@@ -9,11 +9,11 @@ public class BD {
 	
 	private static final String USER="root";
 	private static final String SENHA="root";
-	private static String url="jdbc:mysql://localhost/java";
+	private static String URL="jdbc:mysql://localhost/java";
 	
 	protected Connection getConnection() throws SQLException, ClassNotFoundException{
 		Class.forName("com.mysql.jdbc.Driver");
-		Connection conexao= (Connection) DriverManager.getConnection(url,USER,SENHA);
+		Connection conexao= (Connection) DriverManager.getConnection(URL,USER,SENHA);
 		//System.out.println("Conectado");
 		return conexao;
 		

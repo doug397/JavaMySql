@@ -9,8 +9,10 @@ import br.com.dominio.Usuario;
 
 public interface UsuarioDAOIF {
 	
-	ArrayList<Usuario> getAllUsuario() throws ClassNotFoundException, SQLException;
+  public ArrayList<Usuario> getAllUsuario() throws ClassNotFoundException, SQLException;
 	
-	Usuario getUserId();
+  public	Usuario getUserId(int codigo);
+  
+  public void atualizar(Usuario usuario);
 
 }
