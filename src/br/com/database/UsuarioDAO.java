@@ -16,6 +16,7 @@ public class UsuarioDAO extends BD implements UsuarioDAOIF {
 		if(this.getConnection()== null){
 			return false;
 		}
+		
 		String sql="INSERT INTO usuario(nome,email,senha)values(?,?,?)";
 		PreparedStatement ps= (PreparedStatement)this.getConnection().prepareStatement(sql);
 		

@@ -14,7 +14,6 @@ public class BD {
 	protected Connection getConnection() throws SQLException, ClassNotFoundException{
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection conexao= (Connection) DriverManager.getConnection(URL,USER,SENHA);
-		//System.out.println("Conectado");
 		return conexao;
 		
 	}
